@@ -1,0 +1,23 @@
+<h1>Supprimer le produit</h1>
+
+<div class="card">
+  <div class="card-body">
+
+    <p> Es-tu sûr de vouloir supprimer ce produit ?</p>
+      ID: <%= product._id %>
+    <h3><%= product.name %></h3>
+    <p><strong>Prix :</strong> <%= product.price %> €</p>
+    <p><strong>Catégorie :</strong> <%= product.category %></p>
+
+    <form action="/products/<%= product._id %>/delete" method="POST">
+      <button type="submit" class="btn btn-danger">
+        Oui, supprimer
+      </button>
+
+      <a href="/products" class="btn btn-secondary">
+        Annuler
+      </a>
+    </form>
+ 
+  </div>
+</div>
